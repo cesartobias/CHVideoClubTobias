@@ -1,5 +1,3 @@
-import { DecimalPipe } from "@angular/common";
-
 export interface Pelicula{
     id: number;
     year: number;
