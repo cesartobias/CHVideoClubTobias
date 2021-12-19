@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-
+import { Usuarios } from 'src/app/models/usuarios';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -13,9 +13,11 @@ export class RegistroComponent  {
       password: ['',Validators.required]
     });
 
+ 
     constructor(private fb: FormBuilder) { }
 
-    onSubmit() {
-      console.warn(this.loginForm.value);
+    onSubmit(model:Usuarios) {
+      console.log('usuario guardado correctamente: ', model);
+     // console.warn(this.loginForm.value);
     }
  }
