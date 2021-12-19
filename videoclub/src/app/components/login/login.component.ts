@@ -9,7 +9,7 @@ export class LoginComponent  {
 
   registroForm = this.fb.group({
     usuario: ['', Validators.required],
-    paswword: ['',Validators.required]
+    password: ['',Validators.required]
   });
 
   constructor(private fb: FormBuilder) { }

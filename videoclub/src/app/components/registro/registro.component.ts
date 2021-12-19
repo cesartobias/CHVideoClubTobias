@@ -8,8 +8,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegistroComponent  {
     loginForm = this.fb.group({
+      nombre: ['', Validators.required],
       usuario: ['', Validators.required],
-      paswword: ['',Validators.required]
+      password: ['',Validators.required]
     });
 
     constructor(private fb: FormBuilder) { }
