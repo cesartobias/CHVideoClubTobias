@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent  {
-    registroForm = this.fb.group({
+    loginForm = this.fb.group({
       usuario: ['', Validators.required],
       paswword: ['',Validators.required]
     });
@@ -15,6 +15,6 @@ export class RegistroComponent  {
     constructor(private fb: FormBuilder) { }
 
     onSubmit() {
-      console.warn(this.registroForm.value);
+      console.warn(this.loginForm.value);
     }
  }
