@@ -4,4 +4,5 @@ export interface Pelicula{
     nombre: string;
     tipoPelicula: string;
     precio: number;
+    url : string
 }

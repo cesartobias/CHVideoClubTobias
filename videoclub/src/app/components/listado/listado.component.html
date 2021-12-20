@@ -1,4 +1,4 @@
-<h2>Catalogo de Peliculas</h2>
+<h2 class="text-center">Catalogo de Peliculas</h2>
 <!-- <form [formGroup]="peliculaForm" (ngSubmit)="onSubmit()">
 <div class="mb-3">
     <select id="peliculas" class="col-12" formControlName="nombre">
@@ -8,7 +8,6 @@
   </div>
   <button type="submit" [disabled]="!peliculaForm.valid">Submit</button>
 </form> -->
-
 
 <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -31,15 +30,13 @@
   </a>
 </div> -->
 
-
-
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions"  *ngFor="let item of items;let index = index" [attr.data-slide-to]="index"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let item of items;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
-      <img style="width: 7000px; height:700px" [src]="item.url" class="d-block w-100" [alt]="item.nombre">
+      <img style="width: 7000px; height:700px" [src]="item.url" class="d-block w-100" (click)="addToCart(item)" [alt]="item.nombre">
       <div class="carousel-caption d-none d-md-block">
        <p [textContent]="item.nombre"></p>
        <p [textContent]="item.year"></p>
