@@ -9,18 +9,18 @@ import { HotToastService } from '@ngneat/hot-toast';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent  {
-    loginForm = this.fb.group({
+    registroForm = this.fb.group({
       nombre: ['', Validators.required],
       usuario: ['', Validators.required],
       password: ['',Validators.required]
     });
 
  
-    constructor(private fb: FormBuilder,private toast: HotToastService) { }
+    constructor(private fb: FormBuilder, private toast: HotToastService) { }
 
     onSubmit(model:Usuarios) {
       console.log('usuario guardado correctamente: ', model);
-      console.warn(this.loginForm.value);
+      console.warn(this.registroForm.value);
      this.toast.success('Usuario Guardado Correctamente');
     }
  }
