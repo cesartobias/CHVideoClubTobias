@@ -9,8 +9,9 @@ import { InfoComponent } from './components/info/info.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AppRoutingModule } from './app-routing.module';
- import { RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home/home.component'; 
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { HotToastModule } from '@ngneat/hot-toast';
  
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { HomeComponent } from './components/home/home.component';
     MenuComponent,
     CarritoComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
    AppRoutingModule,
    RouterModule.forRoot([]),
-    
+   HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

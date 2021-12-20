@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Usuarios } from 'src/app/models/usuarios';
+import { HotToastService } from '@ngneat/hot-toast';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -14,10 +16,11 @@ export class RegistroComponent  {
     });
 
  
-    constructor(private fb: FormBuilder) { }
+    constructor(private fb: FormBuilder,private toast: HotToastService) { }
 
     onSubmit(model:Usuarios) {
       console.log('usuario guardado correctamente: ', model);
-     // console.warn(this.loginForm.value);
+      console.warn(this.loginForm.value);
+     this.toast.success('Usuario Guardado Correctamente');
     }
  }
