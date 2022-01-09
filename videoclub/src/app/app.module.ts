@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HotToastModule } from '@ngneat/hot-toast';
- 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     BrowserModule,
     ReactiveFormsModule,
    AppRoutingModule,
+   HttpClientModule,
    RouterModule.forRoot([]),
    HotToastModule.forRoot()
   ],
